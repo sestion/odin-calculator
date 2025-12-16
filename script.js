@@ -10,6 +10,21 @@ function multiply(a, b) {
     return a * b;
 }
 
-function divide (a, b) {
-    return b === 0? undefined : a / b;
+function divide(a, b) {
+    return b === 0 ? undefined : a / b;
+}
+
+function operate(op, a, b) {
+    switch (op) {
+        case "+":
+            return add(a, b);
+        case "-":
+            return subtract(a, b);
+        case "*":
+            return multiply(a, b);
+        case "/":
+            return divide(a, b);
+        default:
+            return undefined;
+    }
 }
